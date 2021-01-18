@@ -6,10 +6,10 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   greeting: {
-    color: "#b2bfca",
+    color: "#92a1ab",
     textTransform: "uppercase",
-    marginTop: "3.5em",
-    marginLeft: "2em",
+    marginTop: "2em",
+    marginLeft: "0.75em",
     fontSize: "2.75rem",
     transitionDelay: "5000",
     fontFamily: "Roboto Mono"

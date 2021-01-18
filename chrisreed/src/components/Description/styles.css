@@ -10,10 +10,10 @@
   margin-top: 0em;
   margin-bottom: .5em;
   margin-left: 2em;
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-family: "Roboto Mono";
   text-transform: uppercase;
-  color: #b2bfca;
+  color: #92a1ab;
 }
 
 span:hover {
@@ -21,7 +21,7 @@ span:hover {
 }
 
 a {
-  color: #b2bfca;
+  color: #92a1ab;
   text-decoration: none;
 }
 

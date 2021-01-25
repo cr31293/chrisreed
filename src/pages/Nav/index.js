@@ -9,19 +9,6 @@ import { makeStyles, useTheme } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    "& .MuiGrid-root": {
-      width: "38em",
-      height: "10em",
-      display: "inline",
-    },
-    [theme.breakpoints.down("lg")]: {
-      "& .MuiGrid-root": {
-        width: "20em",
-        height: "8em",
-      }
-    }
-  },
   selectedInput: {
     color: "#374952",
     marginTop: "0em",
@@ -33,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiListItemText-root": {
       backgroundColor: "transparent",
     },
+    [theme.breakpoints.down('lg')]: {
+      fontSize: "3rem"
+    },
     [theme.breakpoints.down('md')]: {
       fontSize: "2.5rem",
       marginLeft: "-1.5em"
@@ -42,16 +32,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "38%",
     height: "10%",
+    marginTop: "0em"
   },
   gridContainerNav: {
     display: "flex",
     width: "30%",
     height: "100%",
+    marginRight: "3em",
   },
   navItems: {
-    width: "30em",
     height: "20em",
-    marginTop: "12em"
   },
   [theme.breakpoints.down("lg")]: {
     width: "20em"

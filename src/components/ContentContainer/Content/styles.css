@@ -15,7 +15,6 @@ body,
 #root {
   overflow: auto;
   display: flex;
-  justify-content: center;
   background: #f0f0f0;
   padding: 15px;
 }
@@ -26,23 +25,27 @@ body,
     segoe ui, arial, sans-serif;
   width: 100%;
   height: 100%;
-  margin-top: 17.5em;
-  margin-left: -30em;
-  margin-right: -20em;
+  margin-top: 10em;
+  margin-left: 20em;
+  display: space-evenly;
+  margin-right: 20em;
 }
+
+
 
 .list > div {
   position: absolute;
   will-change: transform, width, height, opacity;
   padding: 15px;
-
+  height: 100%;
+  width: 5em;
 }
 
 .list > div > div {
   position: relative;
   background-size: cover;
   background-position: center center;
-  width: 25em;
+  width: 20em;
   height: 100%;
   text-transform: uppercase;
   font-size: 10px;
@@ -52,9 +55,11 @@ body,
   
 }
 
+
+
 .list > div > div > button > span > a > svg {
   color: #0B72B9;
-  height: 3em;
+  height: 100%;
   width: 3em;
   margin: 2.5em;
   margin-bottom: 1em;

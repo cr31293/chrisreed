@@ -25,19 +25,19 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     margin: "auto",
     float: "right",
-    marginTop: "-10em",
-    marginRight: "25em",
+    marginTop: "10em",
+    marginRight: "20em",
     width: "40em",
     height: "40em",
     "& .MuiGrid-root": {
       [theme.breakpoints.down("lg")]: {
-        marginLeft: "30em",
+        marginLeft: "20em",
         width: "50em",
         height: "40em",
       },
       [theme.breakpoints.down("md")]: {
-        marginLeft: "55em",
-        marginTop: "2em",
+        marginLeft: "0em",
+        marginTop: "0em",
         width: "25em",
         height: "100%",
       }
@@ -50,17 +50,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   itemArea: {
-    borderColor: "white",
+    borderColor: "transparent",
   },
   itemContainer: {
-    borderColor: "red",
-    [theme.breakpoints.down("md")]: {},
+    [theme.breakpoints.down("md")]: {
+
+    },
   },
   githubIcon: {
     color: "rgba(255, 255, 255, 0.54)",
     fontSize: "2rem",
     display: "inline",
-    marginTop: ".25em",
+    marginTop: "-0.1em",
     [theme.breakpoints.down("md")]: {
       fontSize: "1rem",
       marginTop: "1em",
@@ -102,7 +103,7 @@ export default function Portfolio() {
   const { size, opacity, ...rest } = useSpring({
     ref: springRef,
     config: config.default,
-    from: { size: "1%", backgroundColor: "white" },
+    from: { size: "1%", backgroundColor: "#f0f0f0" },
     to: { size: open ? "100%" : "100%", backgroundColor: "#c4cacf" },
   });
 
@@ -148,7 +149,7 @@ export default function Portfolio() {
                 <ListSubheader component="div" />
               </GridListTile>
               {data.map((tile, key, props) => (
-                <>
+                
                   <GridListTile
                     className={classes.gridListTile}
                     key={tile.image}
@@ -174,8 +175,8 @@ export default function Portfolio() {
                         backgroundColor: "black",
                         opacity: ".75",
                         color: "white",
-                        height: "2.5em",
-                        
+                        height: "3.25em",
+                        marginTop: "0em"
                       }}
                       action={
                         <>
@@ -211,7 +212,7 @@ export default function Portfolio() {
                     }
                   ></GridListTileBar> */}
                   </GridListTile>
-                </>
+                
               ))}
             </GridList>
           </animated.div>

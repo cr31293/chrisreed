@@ -7,14 +7,14 @@ import Divider from "../Divider/divider";
 
 const useStyles = makeStyles((theme) => ({
   greeting: {
-    color: "#374952",
+    color: "#92a1ab",
     textTransform: "uppercase",
-    marginTop: "1em",
+    marginTop: "-.5em",
     marginLeft: "0.75em",
     fontSize: "2.5rem",
     transitionDelay: "5000",
     fontFamily: "Roboto Mono",
-    wordSpacing: -5,
+    wordSpacing: -3,
     width: "25em",
     [theme.breakpoints.down("lg")]: {
       width: "20em",
@@ -47,14 +47,15 @@ const useStyles = makeStyles((theme) => ({
   },
   fullStackItem: {
     height: "5em",
+    
 
   },
   fullStack: {
     color: "#374952",
     textTransform: "uppercase",
     fontSize: "2rem",
-    marginTop: ".5em",
-    marginLeft: "3em",
+    marginLeft: "4em",
+
     [theme.breakpoints.down("lg")]: {
       fontSize: "1.5rem",
       marginLeft: "2em"

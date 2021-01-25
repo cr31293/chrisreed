@@ -9,17 +9,15 @@ import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
-    display: "flex",
+    display: "inline",
     width: "50em",
     margin: "auto",
-    float: "right",
-    marginRight: "25em",
-    marginTop: "-15em",
+    contentAlign: "center",
+
     [theme.breakpoints.down("lg")]: {
-      marginRight: "10em"
+
     },
     [theme.breakpoints.down("md")]: {
-      marginRight: "-7em"
     }
   },
   itemArea: {
@@ -31,12 +29,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "25em",
     width: "50em",
-    marginTop: "10em",
-    marginLeft: "5em",
     paddingBottom: "1em",
     [theme.breakpoints.down("md")]: {
       width: "30em",
-      height: "50em"
+      height: "40em"
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "25em",
+      height: "45em"
     }
   },
   imgDiv: {
@@ -58,7 +58,20 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "2em",
   },
   adiv: {
-    width: "100%"
+    width: "100%",
+    marginLeft: "25em",
+    marginTop: "15em",
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: "10em",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "5em",
+      marginTop: "10em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "-1em",
+      marginTop: "5em"
+    }
   }
 }));
 export default function About() {

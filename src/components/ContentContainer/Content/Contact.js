@@ -10,7 +10,7 @@ import './styles.css';
 
 export default function Contact() {
   // tie media queries to number of columns
-  const columns = useMedia(['(min-width: 1500px)', '(min-width: 1000px)', '(min-width: 600px)'], [5, 4, 3], 2);
+  const columns = useMedia(['(min-width: 1500px)', '(min-width: 1000px)', '(min-width: 600px)'], [2, 2, 1], 1);
   // measure width of the container element
   const [bind, { width }] = useMeasure()
   // hold items
@@ -36,7 +36,7 @@ const transitions = useTransition(gridItems, (item) => item.css, {
 })
   return (
     <> 
-      <div {...bind} class="list" style={{ height: Math.max(...heights) }}>
+      <div {...bind} class="list" style={{ height: Math.max(...heights)}}>
       {transitions.map(({ item, props: { xy, ...rest }, key }) => (
         <a.div key={key} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`), ...rest }}>
           <div style={{ backgroundImage: item.css }}>

@@ -10,19 +10,21 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: "flex",
     margin: "auto",
-    marginLeft: "50em",
-    marginTop: "-8em",
+    marginLeft: "15em",
+    marginTop: "15em",
     [theme.breakpoints.down("lg")]: {
-      marginLeft: "35em",
-      marginTop: "-8em",
+      marginLeft: "3em",
+      marginTop: "15em",
     },
     [theme.breakpoints.down("md")]: {
-      marginTop: "-8em",
-      marginLeft: "22.5em",
+      marginLeft: "-2em",
+      marginTop: "15em",
     
     },
     [theme.breakpoints.down("sm")]: {
-      marginTop: "2em"
+      marginLeft: "-7.5em",
+      marginTop: "10em",
+      display: "inline"
     }
   },
   responsiveContainer: {
@@ -102,7 +104,7 @@ export default function HomePage () {
               className={classes.text}
             >
               Development designs with mobile-phones, tablets, and PCs in 
-              {matchesSM ? <br /> : <br />} 
+              {matchesSM ? <null /> : <br />} 
               mind to make user experience top-notch on 
               <span className={classes.specialText}> any device.</span>
             </Typography>

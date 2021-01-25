@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     },
     width: "auto",
     marginLeft: "45em",
-    marginTop: "-12em",
+    marginTop: "-13em",
     display: "flex",
     [theme.breakpoints.down("md")]: {
       marginLeft: "12.5em",

@@ -17,6 +17,13 @@
   color: #92a1ab;
 }
 
+@media screen and (max-width: 1024px) {
+  .trails-text {
+    font-size: 1.5rem;
+    margin-top: .75em;
+  }
+}
+
 .trails-text:hover {
   color: #374952;
 

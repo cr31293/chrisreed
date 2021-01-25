@@ -15,16 +15,32 @@ const useStyles = makeStyles((theme) => ({
     transitionDelay: "5000",
     fontFamily: "Roboto Mono",
     wordSpacing: -5,
-    width: "20em"
+    width: "25em",
+    [theme.breakpoints.down("lg")]: {
+      width: "20em",
+      fontSize: "2rem"
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "20em",
+      fontSize: "1.5rem"
+    }
   },
   name: {
     color: "#374952",
     textTransform: "uppercase",
     fontSize: "3.5rem",
-    fontFamily: "Roboto Mono"
+    fontFamily: "Roboto Mono",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "3rem"
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2.5rem",
+    }
+
   },
   fullStackItem: {
     height: "5em",
+
   },
   fullStack: {
     color: "#374952",
@@ -32,6 +48,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2rem",
     marginTop: ".5em",
     marginLeft: "3em",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "1.5rem",
+      marginLeft: "2em"
+    }
   }
 
 }));

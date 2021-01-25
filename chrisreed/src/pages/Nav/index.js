@@ -5,20 +5,27 @@ import Description from "../../components/Description/description";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles, useTheme } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiGrid-root": {
       width: "38em",
       height: "10em",
       display: "inline",
+    },
+    [theme.breakpoints.down("lg")]: {
+      "& .MuiGrid-root": {
+        width: "20em",
+        height: "8em",
+        
+      }
     }
   },
   selectedInput: {
     color: "#374952",
-    marginTop: "-.5em",
+    marginTop: "-1em",
     fontSize: "3.5rem",
     marginLeft: "1.5em",
     borderBottomStyle: "none",
@@ -27,6 +34,9 @@ const useStyles = makeStyles(() => ({
     "& .MuiListItemText-root": {
       backgroundColor: "transparent",
     },
+    [theme.breakpoints.down('md')]: {
+      fontSize: "2.5rem"
+    }
   },
   gridContainerGreeting: {
     display: "flex",
@@ -35,13 +45,16 @@ const useStyles = makeStyles(() => ({
   },
   gridContainerNav: {
     display: "flex",
-    width: "38%",
+    width: "30%",
     height: "100%",
   },
   navItems: {
-    width: "38em",
+    width: "30em",
     height: "20em",
     marginTop: "12em"
+  },
+  [theme.breakpoints.down("lg")]: {
+    width: "20em"
   }
 }));
 

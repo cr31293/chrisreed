@@ -4,3 +4,16 @@
   height: .25em;
   width: 52em;
 }
+
+@media screen and (max-width: 1440px) {
+  .div-divider {
+    width: 45em;
+    
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .div-divider {
+    width: 35em;
+  }
+}

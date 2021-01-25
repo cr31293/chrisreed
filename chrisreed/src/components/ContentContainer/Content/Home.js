@@ -12,8 +12,14 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     marginLeft: "50em",
     marginTop: "-8em",
+    [theme.breakpoints.down("lg")]: {
+      marginLeft: "35em",
+      marginTop: "-8em",
+    },
     [theme.breakpoints.down("md")]: {
-      marginTop: "3em",
+      marginTop: "-8em",
+      marginLeft: "22.5em",
+    
     },
     [theme.breakpoints.down("sm")]: {
       marginTop: "2em"
@@ -27,31 +33,44 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     color: "#374952",
     marginBottom: ".5em",
+    [theme.breakpoints.down("lg")]: {
+
+    }
 
   },
   text: {
     fontSize: "1.25rem",
     fontWeight: 300,
     color: "#92a1ab",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem"
+    }
   },
   specialText: {
     fontFamily: "Pacifico",
     fontSize: "2rem",
     fontWeight: 300,
     color: "red",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.5rem"
+    }
   },
   mobileIcon: {
     height: "10em",
     display: "flex",
     marginBottom: "1em",
     marginRight: "5em",
+    [theme.breakpoints.down("md")]: {
+      height: "8em",
+      marginRight: "2.5em"
+    }
   }
 }))
 
 export default function HomePage () {
   const classes = useStyles();
   const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesSM = useMediaQuery(theme.breakpoints.down("md"));
 
 
   return (
@@ -82,9 +101,9 @@ export default function HomePage () {
               variant="subtitle"
               className={classes.text}
             >
-              Development designs with mobile-phones, tablets, and PCs in mind.
-              {matchesSM ? null : <br />} 
-              to make user experience top-notch on 
+              Development designs with mobile-phones, tablets, and PCs in 
+              {matchesSM ? <br /> : <br />} 
+              mind to make user experience top-notch on 
               <span className={classes.specialText}> any device.</span>
             </Typography>
           </Grid>

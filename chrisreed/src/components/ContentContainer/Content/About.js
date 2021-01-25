@@ -15,6 +15,12 @@ const useStyles = makeStyles((theme) => ({
     float: "right",
     marginRight: "25em",
     marginTop: "-15em",
+    [theme.breakpoints.down("lg")]: {
+      marginRight: "10em"
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "25em"
+    }
   },
   itemArea: {
     borderColor: "transparent",

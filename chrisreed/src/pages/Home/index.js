@@ -1,13 +1,11 @@
 import React from 'react';
-import ContentContainer from '../../components/ContentContainer/ContentContainer';
+import Home from '../../components/ContentContainer/Content/Home';
 
-export default function Home (props) {
+export default function HomePage () {
 
   return (
     <>
-      <ContentContainer>
-        <span>Home</span>
-      </ContentContainer>
+      <Home />
     </>
   )
 }

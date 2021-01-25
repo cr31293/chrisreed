@@ -7,7 +7,7 @@
 }
 
 .trails-text {
-  width: 33%;
+  width: 25%;
   margin-top: .5em;
   margin-bottom: 1.5em;
   margin-left: 2em;
@@ -17,7 +17,7 @@
   color: #92a1ab;
 }
 
-span:hover {
+.trails-text:hover {
   color: #374952;
 
 }

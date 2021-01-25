@@ -1,20 +1,15 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
+import { ThemeProvider } from "@material-ui/styles";
+import theme from "./components/theme";
 import Nav from "./pages/Nav/index";
 import AboutPage from "./pages/About/index";
-import Home from "./pages/Home/index";
+import HomePage from "./pages/Home/index";
 import Portfolio from "./pages/Portfolio";
 
 const useStyles = makeStyles((theme) => ({
-  main: {
-    width: "50%",
-    float: "right"
-  },
-  adiv: {
-    width: "100%",
-    float: "left",
-  }
+
 }))
 
 function App() {
@@ -24,16 +19,19 @@ function App() {
 
   return (
     <>
+    <ThemeProvider 
+      theme={theme}
+      
+    >
       <Router>
         <Nav value={value} setValue={setValue}  />
-        <main className={classes.main}>
          
            
               <Switch>
                 <Route
                   exact
-                  path={process.env.PUBLIC_URL + "/"}
-                  component={Home}
+                  path={process.env.PUBLIC_URL + "/" || "/home"}
+                  component={HomePage}
                 />
                 <Route
                   exact
@@ -46,10 +44,9 @@ function App() {
                   component={Portfolio}
                 />
               </Switch>
-  
 
-        </main>
       </Router>
+    </ThemeProvider>
     </>
   );
 }

@@ -7,7 +7,7 @@ import Divider from "../Divider/divider";
 
 const useStyles = makeStyles((theme) => ({
   greeting: {
-    color: "#92a1ab",
+    color: "#374952",
     textTransform: "uppercase",
     marginTop: "1em",
     marginLeft: "0.75em",

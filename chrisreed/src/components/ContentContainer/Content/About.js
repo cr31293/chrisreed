@@ -10,8 +10,10 @@ import CardContent from "@material-ui/core/CardContent";
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: "flex",
+    width: "50em",
     margin: "auto",
-    marginLeft: "-75em",
+    float: "right",
+    marginRight: "25em",
     marginTop: "-15em",
   },
   itemArea: {
@@ -45,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "2em",
     paddingRight: "2em",
   },
+  adiv: {
+    width: "100%"
+  }
 }));
 export default function About() {
   const classes = useStyles();
@@ -52,10 +57,9 @@ export default function About() {
   const [show, set] = useState(false);
 
   const transitions = useTransition(show, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1, transform: "translate(100%, 0)" },
-    to: { opacity: 1, transform: "translate(100%, 0)" }, 
-    leave: { opacity: 1, transform: "translate(0%, 0)" },
+    from: { opacity: 0, transform: "translate(100%, 0)"  },
+    enter: { opacity: 1, transform: "translate(0%, 0)" },
+    leave: { opacity: 1, transform: "translate(-50%, 0)" },
     });
 
 

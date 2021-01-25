@@ -8,6 +8,8 @@ import AboutPage from "./pages/About/index";
 import HomePage from "./pages/Home/index";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
+import ContactPage from "./pages/Contact/index";
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -44,10 +46,15 @@ function App() {
                   path={process.env.PUBLIC_URL + "/portfolio"}
                   component={Portfolio}
                 />
-                                <Route 
+                <Route 
                   exact
                   path={process.env.PUBLIC_URL + "/resume"}
                   component={Resume}
+                />
+                <Route 
+                  exact
+                  path={process.env.PUBLIC_URL + "/contact"}
+                  component={ContactPage}
                 />
               </Switch>
 

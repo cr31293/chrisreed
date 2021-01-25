@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       marginRight: "10em"
     },
     [theme.breakpoints.down("md")]: {
-      width: "25em"
+      marginRight: "-7em"
     }
   },
   itemArea: {
@@ -34,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "10em",
     marginLeft: "5em",
     paddingBottom: "1em",
+    [theme.breakpoints.down("md")]: {
+      width: "30em",
+      height: "50em"
+    }
   },
   imgDiv: {
     height: "8em",

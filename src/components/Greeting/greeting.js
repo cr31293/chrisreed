@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       width: "20em",
       fontSize: "1.5rem"
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
+      marginLeft: ".25em"
     }
   },
   name: {
@@ -35,6 +39,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "2.5rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1.5rem"
     }
 
   },

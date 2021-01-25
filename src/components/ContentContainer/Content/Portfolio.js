@@ -1,7 +1,13 @@
 import React, { useState, useRef } from "react";
-import { useTransition, useSpring, useChain, config, animated } from 'react-spring';
+import {
+  useTransition,
+  useSpring,
+  useChain,
+  config,
+  animated,
+} from "react-spring";
 import { makeStyles, useTheme } from "@material-ui/styles";
-import data from './data.json';
+import data from "./data.json";
 import Grid from "@material-ui/core/Grid";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
@@ -14,10 +20,6 @@ import InfoIcon from "@material-ui/icons/Info";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CardHeader from "@material-ui/core/CardHeader";
 
-
-
-
-
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
     display: "flex",
@@ -27,57 +29,97 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "25em",
     width: "40em",
     height: "40em",
+    "& .MuiGrid-root": {
+      [theme.breakpoints.down("lg")]: {
+        marginLeft: "30em",
+        width: "50em",
+        height: "40em",
+      },
+      [theme.breakpoints.down("md")]: {
+        marginLeft: "55em",
+        marginTop: "2em",
+        width: "25em",
+        height: "100%",
+      }
+    },
   },
   gridList: {
     "&::-webkit-scrollbar": {
       width: "0.4em",
-      height: 1
-    }
+      height: 1,
+    },
   },
   itemArea: {
     borderColor: "white",
   },
   itemContainer: {
     borderColor: "red",
+    [theme.breakpoints.down("md")]: {},
   },
-  icon: {
+  githubIcon: {
+    color: "rgba(255, 255, 255, 0.54)",
+    fontSize: "2rem",
+    display: "inline",
+    marginTop: ".25em",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1rem",
+      marginTop: "1em",
+      marginLeft: "0em"
+    }
+  },
+  infoIcon: {
     color: "rgba(255, 255, 255, 0.54)",
     fontSize: "2rem",
     display: "inline",
     marginTop: ".125em",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.1rem",
+      marginTop: "1em", 
+      marginLeft: "-4em"
+    }
   },
   tilebar: {
-    marginTop: "-1em"
-  }
+    marginTop: "-1em",
+    "& .MuiTypography-root": {
+    [theme.breakpoints.down("md")]: {
+      fontSize: ".75rem",
+    }
+    }
+  },
 }));
 
 export default function Portfolio() {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, set] = useState(false)
+  const [open, set] = useState(false);
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+
   // const colMatches = useMediaQuery(theme.breakpoints.down("sm"));
   // const gridListTileDisplay = colMatches ? "listItems" : "flex";
   // const gridListTileWidth = colMatches ? "100%" : "50%";
 
-const springRef = useRef()
-const { size, opacity, ...rest } = useSpring({
-  ref: springRef,
-  config: config.default,
-  from: { size: '1%', backgroundColor: 'white' },
-  to: { size: open ? '100%' : '100%', backgroundColor: '#c4cacf' }
-})
+  const springRef = useRef();
+  const { size, opacity, ...rest } = useSpring({
+    ref: springRef,
+    config: config.default,
+    from: { size: "1%", backgroundColor: "white" },
+    to: { size: open ? "100%" : "100%", backgroundColor: "#c4cacf" },
+  });
 
-const transRef = useRef()
-// const transitions = useTransition(open ? data : , tile => tile.name, {
-//   ref: transRef,
-//   unique: true,
-//   trail: 400 / data.length,
-//   from: { opacity: 0, transform: 'scale(0)' },
-//   enter: { opacity: 1, transform: 'translate3d(42px, -62px, -135px)' },
-//   leave: { opacity: 0, transform: 'scale(0)' }
-// })
+  const transRef = useRef();
+  // const transitions = useTransition(open ? data : , tile => tile.name, {
+  //   ref: transRef,
+  //   unique: true,
+  //   trail: 400 / data.length,
+  //   from: { opacity: 0, transform: 'scale(0)' },
+  //   enter: { opacity: 1, transform: 'translate3d(42px, -62px, -135px)' },
+  //   leave: { opacity: 0, transform: 'scale(0)' }
+  // })
 
-useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6])
+  useChain(open ? [springRef, transRef] : [transRef, springRef], [
+    0,
+    open ? 0.1 : 0.6,
+  ]);
 
   return (
     <>
@@ -87,92 +129,76 @@ useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 
         justify="center"
         className={classes.gridContainer}
       >
-        <Grid 
-          className={classes.itemContainer} 
-          item
-        >
-          <animated.div 
-            style={{ 
-              ...rest, 
-              width: size, 
+        <Grid className={classes.itemContainer} item>
+          <animated.div
+            style={{
+              ...rest,
+              width: size,
               height: size,
-              position: 'relative',
-              display: 'flex',
-              padding: '25px',
-              borderRadius: '5px',
-              cursor: 'pointer',
-              boxShadow: '0px 10px 10px -5px rgba(0, 0, 0, 0.05)',
+              position: "relative",
+              display: "flex",
+              padding: "25px",
+              borderRadius: "5px",
+              cursor: "pointer",
+              boxShadow: "0px 10px 10px -5px rgba(0, 0, 0, 0.05)",
             }}
           >
-            <GridList 
-              cellHeight={"auto"}
-              className={classes.gridList}
-            >
-              <GridListTile
-                key="Subheader"
-                cols= { 2 }
-              >
+            <GridList cellHeight={"auto"} className={classes.gridList}>
+              <GridListTile key="Subheader" cols={2}>
                 <ListSubheader component="div" />
               </GridListTile>
               {data.map((tile, key, props) => (
-              <>
-                <GridListTile
-                  className={classes.tile}
-                  key={tile.image}
-                  style={{
-                    width: "50%",
-                    height: "12.5rem",
-                    paddingRight: "1rem",
-                    paddingLeft: "1rem",
-                    display: "flex",
-                    margin: "auto",
-                  }}
-                >
-                  <Link
-                    href={tile.live}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src={process.env.PUBLIC_URL + tile.image}
-                      alt={tile.tile}
-                    />
-                  </Link>
-                  <CardHeader 
-                    className={classes.tilebar}
-                    title={tile.title}
+                <>
+                  <GridListTile
+                    className={classes.gridListTile}
+                    key={tile.image}
                     style={{
-                      backgroundColor: "black", 
-                      opacity: '.75', 
-                      color: "white",
-                      height: "2.5em"
+                      width: "50%",
+                      height: "12.5rem",
+                      paddingRight: "1rem",
+                      paddingLeft: "1rem",
+                      display: "flex",
+                      margin: "auto",
                     }}
-                    action={
-                      <>
-                      <Button
-                        className={classes.icon}
-                        aria-label={'GitHub Repo Link'}
-                      >
-                        <GitHubIcon
-                          className={classes.icon}
-                          style={{fontSize: "1.75rem", marginBottom: ".075em"}}
-                        />
-                      </Button>
-                      <Button
-                        className={classes.icon}
-                        aria-label={`info about ${tile.title}`}
-                      >
-                        <InfoIcon
-                          className={classes.icon}
-                        />
-                      </Button>
-                      </>
-                    }
                   >
+                    <Link href={tile.live} target="_blank" rel="noopener">
+                      <img
+                        src={process.env.PUBLIC_URL + tile.image}
+                        alt={tile.tile}
+                      />
+                    </Link>
+                    <CardHeader
+                      className={classes.tilebar}
+                      title={tile.title}
+                      style={{
+                        backgroundColor: "black",
+                        opacity: ".75",
+                        color: "white",
+                        height: "2.5em",
+                        
+                      }}
+                      action={
+                        <>
+                          <Button
+                            aria-label={"GitHub Repo Link"}
+                            component={Link}
+                            href={tile.repo}
+                          >
+                            <GitHubIcon
+                              className={classes.githubIcon}
+                            />
+                          </Button>
+                          {/* <Button
+                            className={classes.icon}
+                            aria-label={`info about ${tile.title}`}
+                          >
+                            <InfoIcon className={classes.infoIcon} />
+                          </Button> */}
+                        </>
+                      }
+                    ></CardHeader>
 
-                  </CardHeader>
-
-                  {/* <GridListTileBar
+                    {/* <GridListTileBar
                     className={classes.tileBar}
                     title={tile.title}
                     actionIcon={
@@ -184,13 +210,11 @@ useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 
                       </Button>
                     }
                   ></GridListTileBar> */}
-                </GridListTile>
-              </>
+                  </GridListTile>
+                </>
               ))}
             </GridList>
-            
           </animated.div>
-        
         </Grid>
       </Grid>
     </>

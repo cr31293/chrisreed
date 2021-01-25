@@ -19,13 +19,12 @@ const useStyles = makeStyles((theme) => ({
       "& .MuiGrid-root": {
         width: "20em",
         height: "8em",
-        
       }
     }
   },
   selectedInput: {
     color: "#374952",
-    marginTop: "-1em",
+    marginTop: "0em",
     fontSize: "3.5rem",
     marginLeft: "1.5em",
     borderBottomStyle: "none",
@@ -35,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "transparent",
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: "2.5rem"
+      fontSize: "2.5rem",
+      marginLeft: "-1.5em"
     }
   },
   gridContainerGreeting: {
@@ -55,10 +55,10 @@ const useStyles = makeStyles((theme) => ({
   },
   [theme.breakpoints.down("lg")]: {
     width: "20em"
-  }
+  },
 }));
 
-export default function Nav(props) {
+export default function Nav(props, theme) {
   const classes = useStyles();
   const [index, setIndex] = useState(0);
 
@@ -116,7 +116,9 @@ export default function Nav(props) {
               {routes.map((route) => (
                 <Description style={{ height: "3em", width: "17em" }}>
                   <ListItem
-                    style={{ backgroundColor: "transparent" }}
+                    style={{ 
+                      backgroundColor: "transparent", 
+                    }}
                     disableGutters
                     key={`${route}${route.activeIndex}`}
                     component={Link}

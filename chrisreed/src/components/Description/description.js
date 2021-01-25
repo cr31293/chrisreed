@@ -9,7 +9,7 @@ export default function Description({ children, ...props }) {
 
   const trail = useTrail(items.length, {
     config: { mass: 5, tension: 2000, friction: 500 },
-    delay: 1500,
+    delay: 750,
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
     height: open ? 85 : 0,

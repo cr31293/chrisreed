@@ -3,12 +3,13 @@
   height: 100%;
   overflow: hidden;
   cursor: hidden;
-  margin-top: 1em;
+  display: contents;
 }
 
 .trails-text {
-  margin-top: 0em;
-  margin-bottom: .5em;
+  width: 33%;
+  margin-top: .5em;
+  margin-bottom: 1.5em;
   margin-left: 2em;
   font-size: 2rem;
   font-family: "Roboto Mono";
@@ -17,7 +18,8 @@
 }
 
 span:hover {
-  color: #374952
+  color: #374952;
+
 }
 
 a {
@@ -27,4 +29,5 @@ a {
 
 a:hover {
   color: #374952;
+
 }

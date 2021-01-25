@@ -3,16 +3,19 @@ import { makeStyles } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import Typography from "@material-ui/core/Typography";
+import Divider from "../Divider/divider";
 
 const useStyles = makeStyles((theme) => ({
   greeting: {
     color: "#92a1ab",
     textTransform: "uppercase",
-    marginTop: "2em",
+    marginTop: "1em",
     marginLeft: "0.75em",
-    fontSize: "2.75rem",
+    fontSize: "2.5rem",
     transitionDelay: "5000",
-    fontFamily: "Roboto Mono"
+    fontFamily: "Roboto Mono",
+    wordSpacing: -5,
+    width: "20em"
   },
   name: {
     color: "#374952",
@@ -20,6 +23,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "3.5rem",
     fontFamily: "Roboto Mono"
   },
+  fullStackItem: {
+    height: "5em",
+  },
+  fullStack: {
+    color: "#374952",
+    textTransform: "uppercase",
+    fontSize: "2rem",
+    marginTop: ".5em",
+    marginLeft: "3em",
+  }
 
 }));
 
@@ -28,13 +41,27 @@ export default function Greeting() {
   const [checked, setChecked] = useState(true);
   return (
     <>
-      <Grid container direction="row">
-        <Grid style={{ width: "60em" }}>
+      <Grid 
+        container 
+        direction="column"
+        style={{ width: "20em"}}
+      >
+        <Grid item style={{ width: "20em" }}>
           <Slide direction="right" in={checked} timeout={3000}>
             <Typography className={classes.greeting}>
               Hi, my name is <span className={classes.name}>Chris Reed</span>
             </Typography>
           </Slide>
+        </Grid>
+          <Divider />
+        <Grid 
+          item
+          className={classes.fullStackItem}>
+            <Typography 
+              className={classes.fullStack}
+            >
+              Full-Stack Web Developer
+            </Typography>
         </Grid>
       </Grid>
     </>

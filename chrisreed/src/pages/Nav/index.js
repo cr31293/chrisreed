@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     "& .MuiGrid-root": {
       width: "38em",
       height: "10em",
-      display: "inline"
+      display: "inline",
     }
   },
   selectedInput: {

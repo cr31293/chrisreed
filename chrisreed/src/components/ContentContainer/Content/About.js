@@ -17,10 +17,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-15em",
   },
   itemArea: {
-    borderColor: "white",
+    borderColor: "transparent",
   },
   itemContainer: {
-    borderColor: "white",
+    borderColor: "transparent",
   },
   root: {
     height: "25em",

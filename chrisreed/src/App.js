@@ -7,6 +7,7 @@ import Nav from "./pages/Nav/index";
 import AboutPage from "./pages/About/index";
 import HomePage from "./pages/Home/index";
 import Portfolio from "./pages/Portfolio";
+import Resume from "./pages/Resume";
 
 const useStyles = makeStyles((theme) => ({
 
@@ -42,6 +43,11 @@ function App() {
                   exact
                   path={process.env.PUBLIC_URL + "/portfolio"}
                   component={Portfolio}
+                />
+                                <Route 
+                  exact
+                  path={process.env.PUBLIC_URL + "/resume"}
+                  component={Resume}
                 />
               </Switch>
 

@@ -35,8 +35,8 @@ const useStyles = makeStyles((theme) => ({
       height: "40em"
     },
     [theme.breakpoints.down("sm")]: {
-      width: "25em",
-      height: "45em"
+      width: "27.5em",
+      height: "38.5em"
     }
   },
   imgDiv: {
@@ -65,11 +65,11 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "10em",
     },
     [theme.breakpoints.down("md")]: {
-      marginLeft: "5em",
-      marginTop: "10em",
+      marginLeft: "7.5em",
+      marginTop: "8em",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "-1em",
+      marginLeft: "-2em",
       marginTop: "5em"
     }
   }

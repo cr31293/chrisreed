@@ -29,12 +29,20 @@ const useStyles = makeStyles((theme) => ({
   },
   responsiveContainer: {
     marginTop: "10em",
-    marginLeft: "5em"
+    marginLeft: "5em",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "7.5em",
+      marginLeft: "2em"
+    }
   },
 
   fullStackContainer: {
     marginTop: "2em",
-    marginLeft: "3.25em"
+    marginLeft: "3.25em",
+    [theme.breakpoints.down("md")]: {
+      marginTop: "0.5em",
+      marginLeft: "1em"
+    }
   },
 
   header: {
@@ -65,7 +73,12 @@ const useStyles = makeStyles((theme) => ({
     height: "12em",
     display: "flex",
     marginRight: "5em",
-    transform:'rotate(315deg)'
+    transform:'rotate(315deg)',
+    [theme.breakpoints.down("md")]: {
+      height: "7em",
+      marginRight: "2.5em",
+      marginLeft: "3em"
+    }
 
   },
   mobileIcon: {
@@ -74,8 +87,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "8em",
     marginRight: "3em",
     [theme.breakpoints.down("md")]: {
-      height: "8em",
+      height: "5em",
       marginRight: "2.5em",
+      marginLeft: "3em"
     },
   },
 }));

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
       fontSize: "2.5rem",
-      marginLeft: "-1.5em"
+      marginLeft: "0em"
     }
   },
   gridContainerGreeting: {

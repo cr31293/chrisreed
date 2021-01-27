@@ -36,9 +36,9 @@ const useStyles = makeStyles((theme) => ({
         height: "40em",
       },
       [theme.breakpoints.down("md")]: {
-        marginLeft: "0em",
-        marginTop: "0em",
-        width: "25em",
+        marginLeft: "7em",
+        marginTop: "-3em",
+        width: "42em",
         height: "100%",
       }
     },

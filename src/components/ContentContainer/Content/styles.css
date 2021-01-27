@@ -27,11 +27,17 @@ body,
   height: 100%;
   margin-top: 10em;
   margin-left: 20em;
-  display: space-evenly;
   margin-right: 20em;
+  display: space-evenly;
 }
 
-
+@media screen and (max-width: 1200px) {
+  .list {
+    margin-left: 10em;
+    margin-right: 0em;
+    margin-top: 7.5em;
+  }
+}
 
 .list > div {
   position: absolute;

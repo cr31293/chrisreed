@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "1em",
     [theme.breakpoints.down("md")]: {
       width: "30em",
-      height: "40em"
+      height: "38em"
     },
     [theme.breakpoints.down("sm")]: {
       width: "27.5em",
@@ -65,12 +65,12 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "10em",
     },
     [theme.breakpoints.down("md")]: {
-      marginLeft: "7.5em",
-      marginTop: "8em",
+      marginLeft: "8.5em",
+      marginTop: "6em",
     },
     [theme.breakpoints.down("sm")]: {
       marginLeft: "-2em",
-      marginTop: "5em"
+      marginTop: "10em"
     }
   }
 }));

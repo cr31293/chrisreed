@@ -10,7 +10,7 @@ import './styles.css';
 
 export default function Contact() {
   // tie media queries to number of columns
-  const columns = useMedia(['(min-width: 1500px)', '(min-width: 1000px)', '(min-width: 600px)'], [2, 2, 1], 1);
+  const columns = useMedia(['(min-width: 1500px)', '(min-width: 1000px)', '(min-width: 650px)'], [2, 2, 2], 1);
   // measure width of the container element
   const [bind, { width }] = useMeasure()
   // hold items

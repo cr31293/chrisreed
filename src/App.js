@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import theme from "./components/theme";
+import Header from "./components/Greeting/greeting";
 import Nav from "./pages/Nav/index";
+import Menu from "./pages/Menu/index";
 import AboutPage from "./pages/About/index";
 import HomePage from "./pages/Home/index";
 import Portfolio from "./pages/Portfolio";
@@ -18,18 +20,16 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [value, setValue] = useState(0);
-
-
+  
+  
   return (
     <>
     <ThemeProvider 
       theme={theme}
-      
     >
+      <Header />
       <Router>
-        <Nav value={value} setValue={setValue}  />
-         
-           
+<Nav value={value} setValue={setValue}  />
               <Switch>
                 <Route
                   exact
@@ -57,7 +57,7 @@ function App() {
                   component={ContactPage}
                 />
               </Switch>
-
+            <Menu value={value} setValue={setValue}  />
       </Router>
     </ThemeProvider>
     </>

@@ -19,31 +19,30 @@ import Button from "@material-ui/core/Button";
 import InfoIcon from "@material-ui/icons/Info";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import CardHeader from "@material-ui/core/CardHeader";
+import { Autorenew } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
-    display: "flex",
-    margin: "auto",
-    float: "right",
-    marginTop: "10em",
-    marginRight: "20em",
-    width: "40em",
+    marginTop: "12.5em",
     height: "40em",
     "& .MuiGrid-root": {
       [theme.breakpoints.down("lg")]: {
-        marginLeft: "20em",
         width: "50em",
         height: "40em",
       },
       [theme.breakpoints.down("md")]: {
-        marginLeft: "7em",
         marginTop: "-3em",
-        width: "42em",
+        width: "100%",
         height: "100%",
+      },
+      [theme.breakpoints.down("sm")]: {
+        width: '100%',
+        height: 'auto',
       }
     },
   },
   gridList: {
+    width: "100%",
     "&::-webkit-scrollbar": {
       width: "0.4em",
       height: 1,
@@ -53,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "transparent",
   },
   itemContainer: {
+    
     [theme.breakpoints.down("md")]: {
-
     },
   },
   githubIcon: {
@@ -66,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       marginTop: "1em",
       marginLeft: "0em"
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: ".2em"
     }
   },
   infoIcon: {
@@ -87,13 +89,16 @@ const useStyles = makeStyles((theme) => ({
     }
     }
   },
+  gridListTile: {
+    
+  }
 }));
 
 export default function Portfolio() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, set] = useState(false);
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matches = useMediaQuery(theme.breakpoints.down("xs"));
 
   // const colMatches = useMediaQuery(theme.breakpoints.down("sm"));
   // const gridListTileDisplay = colMatches ? "listItems" : "flex";
@@ -134,10 +139,8 @@ export default function Portfolio() {
           <animated.div
             style={{
               ...rest,
-              width: size,
+              width: matches ? '100%' : size,
               height: size,
-              position: "relative",
-              display: "flex",
               padding: "25px",
               borderRadius: "5px",
               cursor: "pointer",
@@ -145,7 +148,7 @@ export default function Portfolio() {
             }}
           >
             <GridList cellHeight={"auto"} className={classes.gridList}>
-              <GridListTile key="Subheader" cols={2}>
+              <GridListTile key="Subheader" cols={ matches ? 0 : 2 }>
                 <ListSubheader component="div" />
               </GridListTile>
               {data.map((tile, key, props) => (
@@ -154,12 +157,12 @@ export default function Portfolio() {
                     className={classes.gridListTile}
                     key={tile.image}
                     style={{
-                      width: "50%",
+                      width:  matches ? '100%' : '40%',
                       height: "12.5rem",
                       paddingRight: "1rem",
                       paddingLeft: "1rem",
-                      display: "flex",
                       margin: "auto",
+                      
                     }}
                   >
                     <Link href={tile.live} target="_blank" rel="noopener">
@@ -176,7 +179,7 @@ export default function Portfolio() {
                         opacity: ".75",
                         color: "white",
                         height: "3.25em",
-                        marginTop: "0em"
+                        marginTop: "0em",
                       }}
                       action={
                         <>

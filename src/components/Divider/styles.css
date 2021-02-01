@@ -1,8 +1,8 @@
 .div-divider {
   background-image: linear-gradient(to right, #b2bfca 20%, #374952 100%);
-  margin-left: -.5em; /*5.25 */
   height: .25em;
   width: 52em;
+
 }
 
 @media screen and (max-width: 1440px) {
@@ -15,5 +15,11 @@
 @media screen and (max-width: 1280px) {
   .div-divider {
     width: 35em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .div-divider {
+    margin-left: -1em;
   }
 }

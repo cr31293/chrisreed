@@ -22,28 +22,50 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "15em",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "-7.5em",
-      marginTop: "10em",
-      display: "inline",
+      marginLeft: "4em",
+      marginTop: "8em",
     },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "0em",
+      lineHeight: "1.5em"
+    }
   },
   responsiveContainer: {
     marginTop: "10em",
-    marginLeft: "5em",
+    marginLeft: "0em",
+    textAlign: "center",
     [theme.breakpoints.down("md")]: {
       maxWidth: "30em",
       marginTop: "7.5em",
-      marginLeft: "2em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "25em",
+      marginTop: "10.5em",
+      marginLeft: "-2em", 
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "0em",
+      marginTop: "-1em",
+      padding: "3em",
+      lineHeight: "1.5em",
     }
   },
 
   fullStackContainer: {
     marginTop: "2em",
-    marginLeft: "3.25em",
+    marginLeft: "0em",
+    textAlign: "center",
     [theme.breakpoints.down("md")]: {
       maxWidth: "30em",
       marginTop: "0.5em",
-      marginLeft: "1em"
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "20em",
+      marginLeft: "0.5em",
+      marginTop: "2.5em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "center"
     }
   },
 
@@ -52,7 +74,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
     color: "#374952",
     marginBottom: ".5em",
-    [theme.breakpoints.down("lg")]: {},
+    [theme.breakpoints.down("lg")]: {
+
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.2rem",
+      textAlign: "center"
+    }
   },
   text: {
     fontSize: "1.25rem",
@@ -74,12 +102,19 @@ const useStyles = makeStyles((theme) => ({
   fullStackIcon: {
     height: "12em",
     display: "flex",
-    marginRight: "5em",
+    marginRight: "0em",
     transform:'rotate(315deg)',
     [theme.breakpoints.down("md")]: {
       height: "7em",
       marginRight: "2.5em",
       marginLeft: "3em"
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "-8em",
+      marginTop: "2em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "1em"
     }
 
   },
@@ -87,12 +122,19 @@ const useStyles = makeStyles((theme) => ({
     height: "10em",
     display: "flex",
     marginTop: "8em",
-    marginRight: "3em",
+    marginRight: "0em",
     [theme.breakpoints.down("md")]: {
       height: "5em",
       marginRight: "2.5em",
       marginLeft: "3em"
     },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "11em",
+      marginLeft: "-1em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "0em",
+    }
   },
 }));
 

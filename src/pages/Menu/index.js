@@ -1,7 +1,5 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback }  from 'react';
 import { Link } from "react-router-dom";
-import Greeting from "../../components/Greeting/greeting";
-import Description from "../../components/Description/description";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -13,48 +11,45 @@ import MenuIcon from "@material-ui/icons/Menu";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
-  selectedInput: {
-    color: "#374952",
-    marginTop: "0em",
-    fontSize: "3.5rem",
-    marginLeft: "3em",
-    borderBottomStyle: "none",
-    borderBottomColor: "#374952",
+  gridDrawer: {
     width: "100%",
-    "& .MuiListItemText-root": {
-      backgroundColor: "transparent",
-      width: "100%",
+    marginLeft: "0em",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "-5em"
     },
-    [theme.breakpoints.down("lg")]: {
-      fontSize: "3rem",
-    },
-    [theme.breakpoints.down("md")]: {
-      fontSize: "2.5rem",
-      marginLeft: "0em",
-    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "-3em",
+      marginTop: "-3em"
+    }
   },
-  gridContainerGreeting: {
-    display: "flex",
-    width: "38%",
-    marginTop: "0em",
-  },
-  gridContainerNav: {
-    display: "flex",
-    width: "30%",
+  drawer: {
+    backgroundColor: "#92a1ab",
+    color: "white",
     height: "100%",
-    marginTop: "10em",
-    marginRight: "5em",
+    width: "25%",
   },
-  navItems: {
-    height: "20em",
+  drawerItem: {
+    textAlign: "center",
   },
-  [theme.breakpoints.down("lg")]: {
-    width: "20em",
+  drawerItemSelected: {
+    "& .MuiListItemText-root": {
+      opacity: 1,
+    },
   },
-
+  drawerIconContainer: {
+    [theme.breakpoints.down("md")]: {
+      marginTop: "2em",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "0em",
+    },
+  },
+  drawerIcon: {
+    height: "1em",
+  },
 }));
 
-export default function Nav(props) {
+export default function Menu(props) {
   const classes = useStyles();
   const theme = useTheme();
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -89,44 +84,6 @@ export default function Nav(props) {
     });
   }, [props.value, routes, props]);
 
-  const description = (
-    <>
-      <Grid
-        container
-        className={classes.gridContainerNav}
-        direction="column"
-        justify="left"
-      >
-        <Description style={{ height: "55em", width: "50%" }}>
-          <List value={props.value} onChange={handleChange}>
-            {routes.map((route) => (
-              <Description style={{ height: "3em", width: "17em" }}>
-                <ListItem
-                  style={{
-                    backgroundColor: "transparent",
-                  }}
-                  disableGutters
-                  key={`${route}${route.activeIndex}`}
-                  component={Link}
-                  to={route.link}
-                  label={route.name}
-                  selected={props.value === route.activeIndex}
-                  onClick={(index) => {
-                    console.log(index);
-                    props.setValue(route.activeIndex);
-                  }}
-                  classes={{ selected: classes.selectedInput }}
-                >
-                  <ListItemText disableTypography>{route.name}</ListItemText>
-                </ListItem>
-              </Description>
-            ))}
-          </List>
-        </Description>
-      </Grid>
-    </>
-  );
-
   const drawer = (
     <>
       <div className={classes.divDrawer}>
@@ -139,6 +96,7 @@ export default function Nav(props) {
           <SwipeableDrawer
             disableBackdropTransition={!iOS}
             disableDiscovery={iOS}
+            anchor="right"
             open={openDrawer}
             onClose={() => setOpenDrawer(false)}
             onOpen={() => setOpenDrawer(true)}
@@ -182,5 +140,7 @@ export default function Nav(props) {
     </>
   );
 
-  return <>{matches ? null : description}</>;
-}
+  return <>{matches ? drawer : null}</>;
+
+
+};

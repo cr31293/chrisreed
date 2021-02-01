@@ -26,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "7.5em",
       width: "100%"
     },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "3em",
+      marginTop: "8em"
+    }
   },
   adiv: {
     width: "auto",

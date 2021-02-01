@@ -13,12 +13,6 @@ const useStyles = makeStyles((theme) => ({
     width: "50em",
     margin: "auto",
     contentAlign: "center",
-
-    [theme.breakpoints.down("lg")]: {
-
-    },
-    [theme.breakpoints.down("md")]: {
-    }
   },
   itemArea: {
     borderColor: "transparent",
@@ -36,8 +30,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "27.5em",
-      height: "38.5em"
-    }
+      height: "38.5em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: "100%",
+    },
   },
   imgDiv: {
     height: "8em",
@@ -56,21 +54,28 @@ const useStyles = makeStyles((theme) => ({
     color: "#374952",
     paddingLeft: "2em",
     paddingRight: "2em",
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "0em",
+      paddingRight: "0em",
+    }
   },
   adiv: {
     width: "100%",
-    marginLeft: "25em",
+    marginLeft: "10em",
     marginTop: "15em",
     [theme.breakpoints.down("lg")]: {
       marginLeft: "10em",
     },
     [theme.breakpoints.down("md")]: {
-      marginLeft: "8.5em",
-      marginTop: "6em",
+      marginLeft: "30%",
+      marginTop: "17.5%",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "-2em",
+      marginLeft: "10%",
       marginTop: "10em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginLeft: "0%",
     }
   }
 }));

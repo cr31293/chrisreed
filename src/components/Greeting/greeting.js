@@ -98,7 +98,7 @@ export default function Greeting() {
   return (
     <>
       <AppBar 
-        position="static"
+        position="relative"
         className={classes.appbar}
       >
 

@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#374952",
     marginTop: "0em",
     fontSize: "3.5rem",
-    marginLeft: "3em",
+    marginLeft: "1em",
     borderBottomStyle: "none",
     borderBottomColor: "#374952",
     width: "100%",
@@ -42,8 +42,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "30%",
     height: "100%",
-    marginTop: "10em",
+    marginTop: "8em",
     marginRight: "5em",
+    marginLeft: "-5em"
   },
   navItems: {
     height: "20em",

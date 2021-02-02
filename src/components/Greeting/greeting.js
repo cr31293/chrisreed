@@ -13,9 +13,13 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     backgroundColor: "transparent",
     boxShadow: 'none',
+    width: "5%",
+    height: "5%",
     pointerEvents: "none",
+    [theme.breakpoints.down("md")]: {
+
+    },
     [theme.breakpoints.down("xs")]: {
-      marginTop: "1.5em",
       padding: "1em"
     }
   },
@@ -39,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: "1rem",
       marginLeft: ".25em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: ".75rem"
     }
   },
   name: {
@@ -54,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem"
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "1.25rem"
     }
 
   },
@@ -74,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "2em"
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "1rem",
+      fontSize: ".75rem",
       marginLeft: "0em"
     }
   },
@@ -88,7 +98,7 @@ export default function Greeting() {
   return (
     <>
       <AppBar 
-        position="fixed"
+        position="static"
         className={classes.appbar}
       >
 

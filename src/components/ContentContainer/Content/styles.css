@@ -55,15 +55,28 @@ body,
 
 @media screen and (max-width: 960px) {
   .list {
-    margin-left: 0%;
+    margin-left: 5%;
   }
 }
 
-@media screen and (width: 375px) {
+@media screen and (max-width: 650px) {
   .list {
-    margin-left: 17.5%;
+    margin-left: 25%;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .list {
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .list {
+    margin-left: 2.5%;
+  }
+}
+
 
 .list > div {
   position: absolute;

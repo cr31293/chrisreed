@@ -23,23 +23,19 @@ import { Autorenew } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
-    marginTop: "12.5em",
     height: "40em",
-    "& .MuiGrid-root": {
       [theme.breakpoints.down("lg")]: {
         width: "50em",
         height: "40em",
       },
       [theme.breakpoints.down("md")]: {
-        marginTop: "-3em",
-        width: "100%",
-        height: "100%",
+        width: "80%",
       },
       [theme.breakpoints.down("sm")]: {
-        width: '100%',
         height: 'auto',
-      }
-    },
+        width: "90%",
+        marginLeft: "-4em",
+      },
   },
   gridList: {
     width: "100%",
@@ -50,11 +46,23 @@ const useStyles = makeStyles((theme) => ({
   },
   itemArea: {
     borderColor: "transparent",
+    
   },
   itemContainer: {
-    
+    marginTop: "15%",
+    width: "90%",
     [theme.breakpoints.down("md")]: {
+      marginTop: "15%",
+      marginLeft: "15%"
     },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "15%",
+      marginLeft: "25%"
+    },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "25%",
+      marginLeft: "27.5%"
+    }
   },
   githubIcon: {
     color: "rgba(255, 255, 255, 0.54)",
@@ -89,9 +97,7 @@ const useStyles = makeStyles((theme) => ({
     }
     }
   },
-  gridListTile: {
-    
-  }
+
 }));
 
 export default function Portfolio() {

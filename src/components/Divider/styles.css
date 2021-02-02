@@ -20,6 +20,13 @@
 
 @media screen and (max-width: 600px) {
   .div-divider {
+    width: 25em;
     margin-left: -1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .div-divider {
+    width: 20em;
   }
 }

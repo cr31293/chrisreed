@@ -71,11 +71,11 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "17.5%",
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "10%",
+      marginLeft: "25%",
       marginTop: "10em"
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "0%",
+      marginLeft: "-6.5%",
     }
   }
 }));

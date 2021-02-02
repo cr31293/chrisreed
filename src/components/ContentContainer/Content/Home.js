@@ -26,8 +26,8 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "8em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "0em",
-      lineHeight: "1.5em"
+      marginLeft: "-5em",
+      lineHeight: "1.5em",
     }
   },
   responsiveContainer: {
@@ -39,14 +39,14 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "7.5em",
     },
     [theme.breakpoints.down("sm")]: {
-      width: "25em",
+      maxWidth: "25em",
       marginTop: "10.5em",
       marginLeft: "-2em", 
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "0em",
-      marginTop: "-1em",
-      padding: "3em",
+      marginLeft: "6em",
+      marginTop: "1em",
+      padding: "1em",
       lineHeight: "1.5em",
     }
   },
@@ -65,7 +65,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "2.5em"
     },
     [theme.breakpoints.down("xs")]: {
-      textAlign: "center"
+      textAlign: "center",
+      marginLeft: "6em",
+      marginTop: "1.5em"
     }
   },
 
@@ -111,10 +113,11 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       marginLeft: "-8em",
-      marginTop: "2em"
+      marginTop: "2em",
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "1em"
+      marginLeft: "9em",
+      marginTop: "0em"
     }
 
   },
@@ -130,10 +133,12 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       marginTop: "11em",
-      marginLeft: "-1em"
+      marginLeft: "-1em",
+      
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "0em",
+      marginLeft: "9em",
+      marginTop: "3em"
     }
   },
 }));

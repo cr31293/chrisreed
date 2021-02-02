@@ -14,11 +14,15 @@ const useStyles = makeStyles((theme) => ({
   gridDrawer: {
     width: "100%",
     marginLeft: "0em",
+    marginTop: "-3em",
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "5em"
+    },
     [theme.breakpoints.down("sm")]: {
       marginLeft: "-5em"
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "-3em",
+      marginLeft: "0em",
       marginTop: "-3em"
     }
   },

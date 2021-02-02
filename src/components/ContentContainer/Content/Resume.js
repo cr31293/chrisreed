@@ -7,18 +7,18 @@ import CardMedia from '@material-ui/core/CardMedia';
 const useStyles = makeStyles((theme) => ({
   media: {
     width: "110%",
-    marginTop: "5em",
+    marginTop: "30%",
     marginLeft: "10em",
     marginRight: "-16.65em",
     display: "block",
     [theme.breakpoints.down("lg")]: {
       marginRight: "10em",
-      marginTop: "5em",
+      marginTop: "10%",
       width: "70%",
     },
     [theme.breakpoints.down("md")]: {
       marginLeft: "5em",
-      marginTop: "5em",
+      marginTop: "15%",
       width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       width: "100%"
     },
     [theme.breakpoints.down("xs")]: {
-      marginLeft: "3em",
+      marginLeft: "20%",
       marginTop: "8em"
     }
   },
